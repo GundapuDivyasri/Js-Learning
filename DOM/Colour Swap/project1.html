@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background-Colour Changer</title>
+    <link rel="stylesheet" href="colour.css">
+</head>
+<body>
+    <h1>Colour Palette Switcher</h1>
+    <div class="container">
+        <div class="box" id="pink"></div>
+        <div class="box" id="skyblue"></div>
+        <div class="box" id="lightgreen"></div>
+        <div class="box" id="yellow"></div>
+    </div>
+    <h2>
+        Click the colour box that you want the background colour To Be!
+    </h2>
+    <center><button id="default">Reset</button></center>   
+    <script>
+        const box=document.querySelectorAll(".box");
+        const body=document.querySelector("body");
+        box.forEach((button)=>{
+            button.addEventListener("click",(e)=>{
+                if(e.target.id==="pink"){
+                    body.style.backgroundColor=e.target.id;
+                    body.style.color="black";
+                }
+                if(e.target.id==="skyblue"){
+                    body.style.backgroundColor=e.target.id;
+                    body.style.color="black";
+                }
+                if(e.target.id==="lightgreen"){
+                    body.style.backgroundColor=e.target.id;
+                    body.style.color="red";
+                }
+                if(e.target.id==="yellow"){
+                    body.style.backgroundColor=e.target.id;
+                    body.style.color="blue";
+                }
+            });
+        });
+        const reset=document.getElementById("default");
+        reset.addEventListener("click",(e)=>{
+            body.style.backgroundColor="white";
+            body.style.color="black";
+        })
+    </script>
+</body>
+</html>

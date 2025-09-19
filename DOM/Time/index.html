@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <div id="heading">Local Time</div>
+        <div id="clock"></div>
+    </div>
+    <script>
+        const clock=document.getElementById("clock");
+setInterval(()=>{
+    let date=new Date();
+    clock.innerHTML=date.toLocaleTimeString();
+
+},1000);
+    </script>
+</body>
+</html>

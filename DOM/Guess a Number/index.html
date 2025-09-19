@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <form>
+            <h1>🤔Guess the Number🤔</h1>
+        <p>Try and Guess a random number between 1 and 100</p>
+        <p>You have 10 attempts to guess the right answer</p>
+            <label>👉Guess The Number</label>
+            <input type="text" id="guess" class="guess">
+            <input type="submit" id="btn" value="Check" class="guess">
+        </form>
+        <div class="inner">
+            <p>Previous Guesses:<span class="guesses"></span></p>
+            <p>Attempts Remaining:<span class="result"></span></p>
+            <p class="range"></p>
+        </div>
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>

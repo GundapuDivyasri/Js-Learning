@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="list">
+        <li>js</li>
+        <li>react</li>
+    </ul>
+</body>
+<script>
+    //add elements
+    function addList(name){
+       const li= document.createElement("li");
+       li.innerHTML=`${name}`;
+       const parent=document.querySelector(".list");
+       parent.appendChild(li);
+    }
+    addList("Node");
+    function addAdva(name){
+        const l1=document.createElement("li");
+        l1.appendChild(document.createTextNode(name));
+        document.querySelector(".list").appendChild(l1);
+    }
+    addList("Express");
+    //edit elements
+    const child=document.querySelector("li:nth-child(3)");
+    const l3=document.createElement("li");
+    l3.textContent="Nodejs";
+    child.replaceWith(l3);
+    //remove elements
+    const lastchild=document.querySelector("li:last-child");
+    lastchild.remove();
+</script>
+</html>
