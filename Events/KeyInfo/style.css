@@ -1,0 +1,24 @@
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color:pink;
+}
+table { 
+    margin: 0 auto; 
+    border-collapse: collapse;  
+    width: 80%; 
+    margin-top:20px; 
+    border:solid 2px black; 
+    font-size: 20px; 
+} 
+ 
+th, td { 
+    padding: 10px; 
+    text-align: center; 
+    border: 1px solid black; 
+} 
+ 
+th { 
+    background-color:white; 
+} 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><div class="box1" style="height:200px ;width:200px; background-color:pink;margin:10px"></div>
+        </li>
+        <li><div class="box2" style="height:200px ;width:200px; background-color:lightblue;margin:10px"></div></li>
+        <li><div class="box3" style="height:200px ;width:200px; background-color:lightgreen ;margin:10px"></div></li>
+        <li><a href="https://google.com" id="google">Google</a></li>
+</body>
+<script>
+    document.querySelector(".box1").onclick=(e)=>{
+        //e.stopPropagation();
+        alert("I am pink");
+    }
+    document.querySelector(".box3").addEventListener("click",(e)=>{
+        console.log(e.target.parentNode);
+        let remove_box=e.target.parentNode;
+        remove_box.remove()
+    })
+    
+    // document.querySelector("ul").onclick=(e)=>{
+    //     alert("I am UL");
+    // }
+</script>
+</html>
+<!--preventdefault()-prevents the default browser action
+stopPropagation()-prevents event bubbling of parent elements-->

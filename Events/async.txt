@@ -1,0 +1,13 @@
+Js->{
+    synchronous
+    single threads
+}
+blocking code->{
+    blocks the flow of program-read file sync
+}
+Non blocking code->{
+    does not block the flow of program -read file async
+    ex:promises,fetch(),settimeout,setinterval,async and await etc
+}
+api-act as a messanger between software systems,apps etc
+they help to reuse exisisting services
