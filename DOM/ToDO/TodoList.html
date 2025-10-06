@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>👉To Do List🗓️</h1>
+    <p>Add your tasks and work on it with ease.</p>
+    <input type="text" placeholder="Enter your task" id="taskinput">
+    <button id="addtask">Add Task</button>
+    <h2>My Tasks</h2>
+    <ul class="tasklist" id="tasks">
+    </ul>
+</body>
+<script>
+    const taskinput=document.getElementById("taskinput");
+    const btn=document.getElementById("addtask");
+    const list=document.getElementById("tasks");
+    btn.addEventListener("click",()=>{
+    const task=taskinput.value.trim();
+    if(task===""){
+        alert("Enter valid input");
+        return;
+    }
+    const li=document.createElement("li");
+    li.textContent=task;
+    const deletebtn=document.createElement("button");
+    deletebtn.style.backgroundColor="rgb(237, 87, 87)";
+    deletebtn.textContent="Delete";
+    deletebtn.addEventListener("click",()=>{
+        list.removeChild(li);
+        list.removeChild(deletebtn);
+    });
+    list.appendChild(li);
+    list.appendChild(deletebtn);
+    list.appendChild(document.createElement("br"));
+    taskinput.value="";
+});
+
+</script>
+</html>

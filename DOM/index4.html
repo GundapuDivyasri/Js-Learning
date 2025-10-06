@@ -26,13 +26,15 @@
         document.querySelector(".list").appendChild(l1);
     }
     addList("Express");
+    addAdva("angular");
     //edit elements
     const child=document.querySelector("li:nth-child(3)");
     const l3=document.createElement("li");
+    //const l3=document.createTextNode("li");
     l3.textContent="Nodejs";
     child.replaceWith(l3);
     //remove elements
     const lastchild=document.querySelector("li:last-child");
-    lastchild.remove();
+    //lastchild.remove();
 </script>
 </html>
