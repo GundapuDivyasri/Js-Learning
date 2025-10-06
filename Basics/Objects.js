@@ -31,3 +31,18 @@ console.log(mentor,name)
 // fetch("https://jsonplaceholder.typicode.com/users")
 //   .then(res => res.json())
 //   .then(data => console.log(data));
+const u1={
+    name:"js",
+    price:"250",
+    isLog:true
+}
+console.log(Object.getOwnPropertyDescriptor(u1,"name"));
+Object.defineProperty(u1,"name",{
+    writable:false,
+    enumerable:false
+})
+console.log(Object.getOwnPropertyDescriptor(u1,"name"));
+for(let [key,value] of Object.entries(u1)){
+    console.log(`${key}:${value}`);
+
+}
